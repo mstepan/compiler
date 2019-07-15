@@ -26,15 +26,17 @@ public class ScannerTest {
             List<String> actualTokens = readAllTokens(reader);
 
             List<String> expectedTokens = Arrays.asList(
-                    "int", "x", "=", "10", ";",
-                    "int", "y", "=", "20", ";",
+                    "int", "main", "(", ")", "{",
+                    "int", "x", "=", "20", ";",
+                    "int", "y", "=", "10", ";",
                     "int", "z", "=", "0", ";",
                     "if", "(", "x", ">=", "y", ")", "{",
                     "z", "=", "x", ";", "}",
                     "else", "{",
                     "z", "=", "y", ";",
                     "}",
-                    "sout", "(", "z", ")", ";"
+                    "print", "(", "z", ")", ";",
+                    "}"
             );
 
             assertEquals(expectedTokens, actualTokens);

@@ -1,15 +1,14 @@
-# java8 template project
+# Simple language compiler implementation.
 
 
+## How to run
 
-## Unit tests.
+1. install java 10
+2. `mvn clean install`
 
-```
-mvn clean test
-```
 
-## Integration tests
+## Structure.
+1. Scanner related classes located inside `com.max.compiler.scanner` package.
+2. Parser related classes located inside `com.max.compiler.parser` package.
 
-```
-mvn clean test -P integration
-```
+
