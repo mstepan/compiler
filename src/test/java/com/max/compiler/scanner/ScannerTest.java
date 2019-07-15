@@ -15,7 +15,6 @@ import static org.junit.Assert.assertEquals;
 
 public class ScannerTest {
 
-
     @Test
     public void generateTokens() throws IOException {
 

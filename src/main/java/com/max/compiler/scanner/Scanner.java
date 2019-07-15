@@ -2,32 +2,10 @@ package com.max.compiler.scanner;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
-final class Scanner implements Iterator<String> {
-
-    private static final Set<String> KEYWORDS = new HashSet<>();
+final class Scanner {
 
     private static final char EMPTY_CHAR = '\0';
-
-    static {
-        // control flows
-        KEYWORDS.add("if");
-        KEYWORDS.add("else");
-        KEYWORDS.add("while");
-        KEYWORDS.add("for");
-
-        // types
-        KEYWORDS.add("long");
-        KEYWORDS.add("int");
-        KEYWORDS.add("short");
-        KEYWORDS.add("char");
-        KEYWORDS.add("byte");
-        KEYWORDS.add("double");
-        KEYWORDS.add("float");
-    }
 
     private final BufferedReader reader;
 
@@ -37,13 +15,8 @@ final class Scanner implements Iterator<String> {
         this.reader = reader;
     }
 
-    @Override
-    public boolean hasNext() {
-        return true;
-    }
 
-    @Override
-    public String next() {
+    String next() {
         try {
             if (charVal == EMPTY_CHAR) {
 
@@ -115,10 +88,6 @@ final class Scanner implements Iterator<String> {
                 break;
             }
         }
-
-//                if (KEYWORDS.contains(token.toString())) {
-//                    token.append("[keyword]");
-//                }
 
         return token.toString();
     }
